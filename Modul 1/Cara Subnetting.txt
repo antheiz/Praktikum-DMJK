@@ -1,0 +1,48 @@
+-----------------------------------------------------------
+|	RUMUS : 									|
+|												|
+|	/25   /26  /27  /28  /29  /30  /31 /32			|
+|	-------------------------------------------			|
+|	128    64   32    16     8      4      2     1			|
+|	-------------------------------------------			|
+|	1	  1	  1	   1	    1	    1        0      0              (1)	|
+|	1    	  1 	   1	   1       0     0       0	0		(2)	|
+|	1    	  1 	   1	   1       1     0       0	0		(3)	|
+|---------------------------------------------------------	|
+
+	Nama : Dortheis Andatu
+	Kelas : DMJK - A
+	
+	--------------------------------------------
+	(1):
+
+	IP address yang akan kita subnetting adalah 192.168.3.0/30
+	Subnet mask binner = 11111111.11111111.11111111.11111100
+	Subnet mask decimal = 255.255.255.252 {didapat dari 256-(2^2=4) }
+	Network address = 192.168.3.0
+	Host Valid atau IP Valid = 192.168.3.1 & 192.168.3.2 
+	Broadcast address = 192.168.3.3
+	--------------------------------------------
+
+	(2):
+
+	IP address yang akan kita subnetting adalah 192.168.1.0/28
+	Subnet mask binner = 11111111.11111111.11111111.11110000
+	Subent mask decimal = 255.255.255.240 {didapat dari 256-(2^4=16) }
+	Network address = 192.168.1.0
+	Host Valid atau IP Valid = 192.168.1.1 - 192.168.1.14
+	Broadcast address = 192.168.1.15
+	--------------------------------------------
+
+	(3):
+
+	IP address yang akan kita subnetting adalah 192.168.2.0/29
+	Subnet mask binner = 11111111.11111111.11111111.11111000
+	Subent mask decimal = 255.255.255.248 {didapat dari 256-(2^3=8) }
+	Network address = 192.168.2.0
+	Host Valid atau IP Valid = 192.168.2.1 - 192.168.2.6
+	Broadcast address = 192.168.2.7
+
+
+
+

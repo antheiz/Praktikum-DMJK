@@ -1,0 +1,42 @@
+Konfigurasi Vlan (Virtual Local Area Network)
+
+SW_1:
+
+enable
+vlan database
+vlan 101 name Ruang_1
+vlan 102 name Ruang_2
+exit
+configure terminal
+interface FastEthernet0/1
+switchport access vlan 101
+exit
+interface FastEthernet1/1
+switchport access vlan 101
+exit
+interface FastEthernet2/1
+switchport access vlan 102
+exit
+interface FastEthernet3/1
+switchport access vlan 102
+exit
+
+#TRUNK
+interface FastEthernet4/1
+switchport mode trunk
+
+
+RTR_1:
+
+enable
+configure terminal
+interface fa0/0.101
+encapsulation  dot1q 101
+ip address 192.168.1.3 255.255.255.248
+end
+configure terminal
+interface fa0/0.102
+encapsulation dot1q 102
+ip address 192.168.2.3 255.255.255.248
+end
+

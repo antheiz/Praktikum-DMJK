@@ -1,0 +1,19 @@
+Konfigurasi Routing Static 
+
+Proses setting router jaringan dengan menggunakan 
+tabel routing yang dilakukan secara manual saat 
+melakukan konfigurasi. Jika ada perubahan, 
+maka kita harus melakukan 
+setting ulang pada jaringan.
+
+RTR-1:
+
+enable
+configure terminal
+ip route 192.168.2.0 255.255.255.248 192.168.3.2
+
+RTR-2:
+
+enable
+configure terminal 
+ip route 192.168.1.0 255.255.255.240 192.168.3.1

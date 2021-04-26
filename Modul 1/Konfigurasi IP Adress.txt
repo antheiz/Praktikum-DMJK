@@ -1,0 +1,25 @@
+Konfigurasi IP Adress pada Router
+
+RTR-1 :
+
+interface FastEthernet0/0
+ip address 192.168.1.1 255.255.255.240
+no shutdown
+exit
+interface FastEthernet1/0
+ip address 192.168.3.1 255.255.255.252
+no shutdown
+
+--------------------------------------------------
+
+RTR-2:
+
+enable
+configure terminal
+interface FastEthernet0/0
+ip address 192.168.2.1 255.255.255.248
+no shutdown
+exit
+interface FastEthernet1/0
+ip address 192.168.3.2 255.255.255.252
+no shutdown

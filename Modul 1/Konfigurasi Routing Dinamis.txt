@@ -1,0 +1,23 @@
+Konfigurasi Routing Dinamis (RIP: Routing Information Protocol)
+
+Routing yang memiliki kemampuan untuk 
+membuat tabel routing secara otomatis 
+berdasarkan lalu lintas jaringan dan 
+router yang terhubung. 
+
+RTR-1
+
+enable
+configure terminal
+router rip
+network 192.168.1.0
+network 192.168.3.0
+
+
+RTR-2
+
+enable
+configure terminal
+router rip
+network 192.168.2.0
+network 192.168.3.0
