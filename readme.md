@@ -8,6 +8,6 @@
 | 3. | Static & Dinamic NAT | [Play](https://youtu.be/LtlIaNhSTf8) | 17 Mei 2021
 | 4. | DNS, HTTP, FTP & MAIL | [Play](https://youtu.be/UYeuJaQIGvY) | 24 Mei 2021
 
-### Develop by 📝
+### Manege by 📝
 [Theis Andatu](https://theisandatu.com) 🚀
 
