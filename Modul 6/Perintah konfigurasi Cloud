@@ -1,0 +1,94 @@
+R1 (Jakarta) = 
+int fa0/0
+ip add 192.168.10.1 255.255.255.0
+no shut
+exit
+int s0/1/0
+ip add 192.168.50.1 255.255.255.0
+no shut
+encapsulation frame-relay
+frame-relay interface-dlci 102
+frame-relay interface-dlci 103
+frame-relay interface-dlci 104
+end
+
+configure terminal
+ip route 192.168.20.0 255.255.255.0 192.168.50.2
+ip route 192.168.30.0 255.255.255.0 192.168.50.3
+ip route 192.168.40.0 255.255.255.0 192.168.50.4
+exit
+
+--------------------------------------------------------
+
+R2 (Bandung) = 
+int fa0/0
+ip add 192.168.20.1 255.255.255.0
+no shut
+exit
+int s0/1/0
+ip add 192.168.50.2 255.255.255.0
+no shut
+encapsulation frame-relay
+frame-relay interface-dlci 202
+frame-relay interface-dlci 203
+frame-relay interface-dlci 204
+end
+
+configure terminal
+ip route 192.168.10.0 255.255.255.0 192.168.50.1
+ip route 192.168.30.0 255.255.255.0 192.168.50.3
+ip route 192.168.40.0 255.255.255.0 192.168.50.4
+exit
+
+--------------------------------------------------------
+
+R3 (Jogja) = 
+int fa0/0
+ip add 192.168.30.1 255.255.255.0
+no shut
+exit
+int s0/1/0
+ip add 192.168.50.3 255.255.255.0
+no shut
+encapsulation frame-relay
+frame-relay interface-dlci 302
+frame-relay interface-dlci 303
+frame-relay interface-dlci 304
+end
+
+configure terminal
+ip route 192.168.10.0 255.255.255.0 192.168.50.1
+ip route 192.168.20.0 255.255.255.0 192.168.50.2
+ip route 192.168.40.0 255.255.255.0 192.168.50.4
+exit
+
+---------------------------------------------------------
+
+R4 (Surabaya) = 
+int fa0/0
+ip add 192.168.40.1 255.255.255.0
+no shut
+exit
+int s0/1/0
+ip add 192.168.50.4 255.255.255.0
+no shut
+encapsulation frame-relay
+frame-relay interface-dlci 402
+frame-relay interface-dlci 403
+frame-relay interface-dlci 404
+end
+
+configure terminal
+ip route 192.168.10.0 255.255.255.0 192.168.50.1
+ip route 192.168.20.0 255.255.255.0 192.168.50.2
+ip route 192.168.30.0 255.255.255.0 192.168.50.3
+exit
+
+
+
+
+
+
+
+
+
